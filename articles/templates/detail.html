@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail page</title>
+</head>
+<body>
+
+<h1>This is Detail page</h1>
+
+<h2>{{ post.title }}</h2>
+
+<h4>{{ post.sub_title }}</h4>
+
+<p>{{ post.content }}</p>
+
+{% for image in images.all %}
+<img src="{{ image.image.url }}" alt="{{ image.explanation }}">
+<p>{{  image.explanation }}</p>
+<br>
+<hr>
+<br>
+<br>
+{% endfor %}
+
+</body>
+</html>
